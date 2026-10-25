@@ -1,38 +1,38 @@
-# M5 GSC / GA4 表现排查
-## 输入与数据质量
-读取分析期/对比期、时区、市场、筛选、导出粒度、指标定义、关键事件配置、网站/活动变更记录。只有单期数据时可描述现状，不推断变化。
-检查缺失、重复、日期覆盖、抽样/阈值/导出限制、渠道定义和追踪变化。比较相同范围与可比天数，必要时按日归一并考虑星期与季节性。
-GSC 常见字段：date、query、page、country、device、clicks、impressions、ctr、position。
-GA4 常见字段：date、landing page、session source/medium 或 session default channel group、device、sessions、engaged sessions、key events、purchase revenue。
-不要混淆 session 范围和 user 范围；用户数通常不可跨行简单求和。不同导出可有不同字段，先映射再计算。
-## 指标规则
-- CTR=总点击/总展示；互动率=互动会话/会话；跳出率=1−互动率。比率须由匹配范围的分子分母计算，不简单平均行比率。
-- 会话关键事件率=至少发生一次关键事件的会话/全部会话；不能用关键事件次数替代分子。缺少相应会话数时不计算该率。
-- GSC 点击不等于 GA4 会话；自然查询列表不应假设由 GA4 完整提供。
-- GSC 平均排名不是固定名次；聚合须保留来源口径，不能任意平均多个导出平均值。查询表可能因匿名查询/限制而不等于总计。
-- 默认 GA4 互动会话条件包括超过设定时长（常见默认10秒）、关键事件或至少两次页面/屏幕浏览；实际配置优先。跳出不等于只看一页。
-- 绝对变化=本期−前期；相对变化=绝对变化/前期；前期为零则相对变化未定义。比率差用百分点。无数据不同于零。
-- 不直接按 query 将 GSC 与 GA4 行连接；如按规范化落地页/日期分析，应先对齐粒度与筛选，避免多对多放大，保留无法匹配项。不同系统仅作可解释的交叉核验。
-## 排查步骤
-1. 验证采集与比较口径。
-2. 定位链路：展示→点击→访问→互动→业务行动；不把链路简单当成同一批人的精确漏斗。
-3. 按页面、查询、设备、国家、渠道拆分；只使用数据实际支持的维度。
-4. 找出最大绝对变化贡献项；展示样本量、小基数与不确定性。
-5. 提出原因假设，逐一列证据、反例及所需补查。
-6. 选择行动，列负责人建议、指标、复查窗口及成功/停止条件。
-7. 无法确认原因时输出待验证诊断，不用相关性替代因果。
-## 现象与下一步
-| 现象 | 优先检查 | 可选行动 |
+# Diagnose Search Performance
+## Inputs and quality checks
+Read analysis/comparison periods, timezone, market, filters, export grain, metric definitions, key event setup and site/activity changes. With only one period, describe status, not change.
+Check missingness, duplicates, coverage, sampling/thresholding/export limits, channel definitions and tracking changes. Compare equivalent scopes/days; normalise per day where helpful and consider weekdays and seasonality.
+Common GSC fields: date, query, page, country, device, clicks, impressions, CTR, position.
+Common GA4 fields: date, landing page, session source/medium or session default channel group, device, sessions, engaged sessions, key events, purchase revenue.
+Map supplied fields rather than assuming names. Do not mix session/user scopes. Users usually cannot be summed across rows.
+## Metric rules
+- CTR = total clicks / total impressions; engagement rate = engaged sessions / sessions; bounce rate = 1 − engagement rate. Recompute from matching numerators/denominators, not an average of row rates.
+- Session key event rate = sessions with at least one key event / all sessions. Key event counts are not qualifying-session counts; do not calculate the rate without the proper numerator.
+- GSC clicks differ from GA4 sessions; GA4 does not provide a complete organic-query list.
+- GSC average position is not a fixed rank. Preserve source aggregation definitions rather than averaging averages across exports. Query tables can exclude anonymised queries or have limits and need not equal totals.
+- GA4 engagement commonly uses a configured duration (default often 10 seconds), a key event, or two page/screen views; verify actual configuration. Bounce does not simply mean a one-page visit.
+- Absolute change = current − previous; relative change = absolute change / previous; zero baseline means undefined relative change. Express rate differences in percentage points. Missing is not zero.
+- Do not join GSC and GA4 rows directly by query. Before page/date comparisons, align grain, filters and URL normalisation, avoid many-to-many multiplication, and retain unmatched records. Treat systems as cross-checks, not identical populations.
+## Process
+1. Validate collection and comparison definitions.
+2. Locate the problem along visibility → clicks → visits → engagement → business action; do not imply an exact same-user funnel.
+3. Segment by supported page/query/device/country/channel dimensions.
+4. Find largest absolute contributors; show denominators, small bases and uncertainty.
+5. List possible explanations with evidence, counterevidence and missing checks.
+6. Recommend actions, suggested owner, metric, review window and success/stop conditions.
+7. Keep unconfirmed causes as hypotheses, not causal conclusions.
+## Diagnostic paths
+| Symptom | First checks | Possible action |
 |---|---|---|
-| 无展示 | 收录、抓取、需求、内容匹配 | 修可确认技术障碍、补内链、重评选题 |
-| 展示多点击少 | 查询、排名、设备、实际结果页 | 改标题和价值表达，避免只看总 CTR |
-| 展示升 CTR 降 | 是否新覆盖低排名查询、总点击 | 优化有价值的新需求 |
-| 点击下降 | 展示/排名拆分、页面范围、季节性、改版 | 按证据修内容或技术问题 |
-| 流量升咨询不升 | 意图、受众、CTA、有效线索、归因窗口 | 改路径或补决策内容 |
-| 互动弱 | 查询匹配、开头、手机体验、加载 | 提前回答、改结构与体验 |
-| 时长长无行动 | 阅读价值、找信息困难、CTA | 检查路径，不自动视为好表现 |
-| 产品点击多购买少 | 库存、价格、配送、结账 | 与电商团队核对障碍 |
-| GSC 正常 GA4 降 | 追踪、同意设置、渠道口径 | 先解释或修复测量 |
-| 关键事件激增 | 重复触发、垃圾提交、真实业务记录 | 核实有效线索、去重建议 |
-## 输出
-分析范围与质量结论；核心变化表（前期、本期、绝对/相对变化、分母）；维度贡献；事实/假设/反证；排查与行动表；衡量方案。
+| No impressions | Indexing, crawling, demand, relevance | Fix confirmed barriers, add internal links, revisit topic |
+| High impressions, low clicks | Query, position, device, live results | Improve title/value proposition based on evidence |
+| More impressions, lower CTR | New lower-ranking queries and total clicks | Improve valuable new coverage |
+| Fewer clicks | Impressions/position, pages, seasonality, changes | Fix supported content or technical issue |
+| More visits, flat enquiries | Intent, audience, CTA, valid leads, attribution window | Improve path or decision-stage content |
+| Weak engagement | Query match, opening, mobile experience, loading | Answer earlier and improve structure/experience |
+| Long time, no action | Useful reading versus confusion, CTA | Investigate path; do not assume success |
+| Product clicks, few purchases | Stock, price, shipping, checkout | Check barriers with commerce team |
+| Stable GSC, lower GA4 | Tracking, consent, channel definitions | Explain/fix measurement before judging SEO |
+| Key-event spike | Duplicate triggers, spam, business records | Verify valid leads and deduplication needs |
+## Deliver
+Scope/quality finding; metric comparison with bases; segment contributors; facts/hypotheses/counterevidence; checks/actions; measurement plan.

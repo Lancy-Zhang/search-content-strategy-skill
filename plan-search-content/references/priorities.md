@@ -1,14 +1,14 @@
-# M6 内容投入与优先级
-## 输入
-读取候选任务、证据、业务目标、资源约束和依赖。可接收 M1/M2/M5 结果或独立任务清单。
-## 步骤
-1. 先检查硬性条件：品牌无相关性、事实无法支持、无产品或执行依赖未解决的任务，先暂缓或改为研究任务。
-2. 逐项评估业务相关性、需求证据、改善空间、可增加价值、制作/维护成本、结果不确定性。
-3. 默认采用高/中/低及具体理由；不把无数据包装为精确回报。
-4. 根据可用人力与期限安排先做/后做/暂缓；区分“潜在价值”与“本周期可执行”。
-5. 为每项任务给最小交付、依赖、负责人建议、衡量指标与复查条件。优先级反馈给 Brief。
-## 可选评分
-只有用户需要量化排序时，使用明确的序数评分：业务匹配 0–3、需求证据 0–3、改善空间 0–3、独特价值 0–3；成本 1–3。默认 score=(四项之和)/成本，仅作为排序启发式，不代表 ROI。用户可调整权重；未知输入填未知并给范围，不假装有精确分数。先筛硬性条件，再评分，保留置信度及敏感性说明。
-## 输出
-Task-ID、关联 O/K/P-ID、行动、预期作用、证据、各评估因素、优先级、理由、资源/依赖、最小交付、指标、复查条件。
-不要仅凭搜索量排序；有需求信号的旧页更新可能比新建更值得，但须查看实际内容和资源。
+# Prioritise Content Work
+## Input
+Use candidate tasks, goal, evidence, resources and dependencies. Accept opportunities, page plans, diagnostic actions or a standalone backlog.
+## Process
+1. Screen hard dependencies: weak brand fit, unsupported claims or missing execution prerequisites require deferral or a research task.
+2. Assess business fit, demand evidence, improvement potential, distinctive value, creation/maintenance effort and uncertainty.
+3. Default to high/medium/low judgements with concrete reasons. Do not portray missing evidence as precise returns.
+4. Allocate do first / do later / defer within the user's time and resource limits. Separate potential value from feasibility this period.
+5. Give each action a minimum deliverable, dependencies, suggested owner, metric and review condition. Pass selected tasks to briefing.
+## Optional scoring
+Use only when requested: business fit, demand evidence, improvement potential and distinctive value each 0–3; effort 1–3. Default score = sum of four benefit ratings / effort. Explain that this is an ordinal prioritisation aid, not ROI. Allow alternative weights. Mark unknowns or ranges, screen hard constraints first, and show confidence/sensitivity where relevant.
+## Deliver
+Named task; intended effect and evidence; assessment factors; priority and rationale; effort/dependencies; suggested owner; minimum deliverable; metric and review condition.
+Do not rank solely by search volume. Existing-page updates may outperform new production in effort efficiency, but inspect content and evidence first.

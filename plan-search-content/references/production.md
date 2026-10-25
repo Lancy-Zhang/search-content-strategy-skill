@@ -1,14 +1,14 @@
-# M4 内容撰写与质量检查
-## 输入
-读取 Brief、品牌语气、已验证产品资料及获准使用的证据。缺少 Brief 时先通过 M3 生成精简版，已有足够信息不重复询问。
-## 步骤
-1. 检查 Brief 中事实与缺口，确定发布所需材料。
-2. 按大纲起草：优先回答核心问题；按用户场景组织；关键词自然使用，不堆砌。
-3. 对数字、产品规格、价格、比较、引述逐项追溯证据。证据不足则删除断言、改为可支持表述或在编辑说明中列待核实项。
-4. 检查搜索意图、内容完整性、品牌语气、可读性、原创价值与 CTA。
-5. 给出 title、meta description、已有内链建议。图片 alt 应描述图像信息，不机械塞关键词；不存在的链接写为待创建建议。
-6. 输出修改稿及简短 QA 记录；不要把编辑备注混进面向读者的最终正文。
-## 输出
-P-ID、Brief 摘要、正文、标题与描述、内链/图片建议、事实核对表、尚需确认事项、重要修改与理由。
-## 验收
-不得虚构亲身体验、用户评价、专家背书、测试结果或引用；不得保证 SEO 排名或 AI 引用。若用户要求 GEO，增强清楚的定义、来源和可核实信息，但不宣称存在通用引用保证。涉及健康/法律/金融等专业声明，使用权威材料并保留适用范围。
+# Write & Review Content
+## Input
+Use a brief, brand voice and verified evidence. If no brief exists, create a concise one from sufficient audience/goal/product information; ask only for critical gaps.
+## Process
+1. Check the brief's facts, open questions and required materials.
+2. Draft from the outline. Answer the core question early, organise around real use cases, and use keywords naturally.
+3. Trace numbers, specifications, pricing, comparisons and quotations to evidence. Remove unsupported assertions, narrow them to what is supported, or list them outside the reader-facing text as editing questions.
+4. Review intent, completeness, brand voice, readability, useful original contribution and CTA.
+5. Suggest title, meta description and verified internal links. Describe image content in alt text rather than stuffing keywords. Label proposed new destinations rather than inventing existing URLs.
+6. Deliver revised content and a concise quality-review record; keep editorial notes separate from publishable prose.
+## Deliver
+Brief summary; draft; title/description; internal links and image suggestions; claim/source checks; unresolved facts; significant revisions and reasons.
+## Checks
+Do not fabricate first-hand experience, reviews, endorsements, tests or citations. Do not promise rankings or AI inclusion. For GEO requests, favour clear definitions and verifiable information without implying a universal citation formula. Use authoritative evidence and appropriate scope for regulated or high-stakes claims.

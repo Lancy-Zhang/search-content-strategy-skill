@@ -1,7 +1,8 @@
 interface:
-  display_name: 搜索内容策略工作台
-  short_description: 统一完成内容机会、关键词规划、简报、写作质检、数据诊断与投入排序
-  default_prompt: 使用 $plan-search-content，根据品牌资料选择合适模块，完成内容研究、规划或效果诊断，并提供可执行交付。
+  display_name: Search Content Toolkit
+  short_description: Research, plan, write and improve search content
+  default_prompt: Use $plan-search-content for my brand. Help me choose a task and
+    tell me what to provide, or start with the information I have.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:

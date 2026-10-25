@@ -1,14 +1,14 @@
-# M1 内容机会识别
-## 输入
-读取品牌信息、用户问题、现有页面和搜索证据；有条件时加入客服、销售、站内搜索及访谈资料。
-## 步骤
-1. 确认业务目标与产品边界，提取使用场景和真实用户问题。
-2. 收集查询、PAA、相关搜索和现有内容。记录来源、日期、市场与语言。将 PAA 当研究线索，不当搜索量。
-3. 按具体用户需求分组；不要仅按信息型/交易型四大标签划分选题。
-4. 判断品牌相关性：品牌是否提供相关产品、专业知识或可验证经验？无法增加价值的热门话题暂缓。
-5. 检查品牌现有页及代表性竞争页。记录具体 URL、覆盖范围和缺失信息。没有查看页面，不宣称竞品内容有缺口。
-6. 定义品牌可增加的价值：产品实测、原创数据、场景演示、比较表、专家说明或本地信息；将尚未具备的材料列入制作需求。
-7. 生成选题并交给 M2/M6。区分“研究支持的机会”和“需验证的候选”。
-## 输出与验收
-输出 O-ID、用户需求、证据 ID、品牌相关性、已检查页面、具体不足、可增加价值、建议选题、页面形式、投入需求、建议优先级和理由。
-每个机会必须能回答“给谁、解决什么、品牌为什么适合做”；不把多个相同需求重复包装成新选题。
+# Find Content Opportunities
+## Input
+Use brand/product information, target market and goal. Add audience questions, current URLs, search evidence, competitor pages or customer research when available.
+## Process
+1. Confirm the product boundary, audience, use cases and desired business action.
+2. Collect questions from queries, People Also Ask, related searches, customer support, interviews or supplied material. Record source, market, language and date. Treat search suggestions as research leads, not search-volume evidence.
+3. Group by the underlying user problem, not just broad informational/transactional labels.
+4. Check brand relevance: can this brand provide relevant products, expertise or experience? Defer popular topics with weak business fit.
+5. Review existing brand pages and representative competing pages. Record exact URLs and specific omissions. Without inspecting a competitor page, call a gap a hypothesis.
+6. Specify additional value: verified product tests, original data, examples, comparisons, expert input or local guidance. Record materials still required.
+7. Propose topics and page formats; pass them to page planning and prioritisation. Separate research-supported opportunities from candidate ideas.
+## Deliver
+User need; source; brand relevance; reviewed pages and specific gap; value to add; proposed topic and format; required resources; priority rationale.
+Every topic must identify who it serves, what problem it solves and why the brand can contribute. Avoid duplicate versions of the same opportunity.

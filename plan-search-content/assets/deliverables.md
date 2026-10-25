@@ -1,41 +1,41 @@
-# 统一交付模板
-按任务选择所需表格，不强制输出全部。保留关联 ID。
+# Delivery Templates
+Select only relevant outputs. Put descriptive names before optional traceability IDs.
 
-## 开头
-建议与理由：
-品牌 / 市场 / 语言：
-执行模块及范围：
-关键已知事实与影响决策的缺口：
+## Opening
+Recommendation and reason:
+Brand / market / language:
+Task and scope:
+Decision-relevant facts and gaps:
 
-## 机会表 M1
-| O-ID | 用户需求 | E-ID | 品牌相关性 | 已检查页面/不足 | 可增加价值 | 选题/形式 | 优先级理由 |
+## Find Content Opportunities
+| User need | Evidence | Brand relevance | Reviewed gap | Value to add | Topic / format | Priority reason |
+|---|---|---|---|---|---|---|
+
+## Plan Keywords & Pages
+| Keyword group / original terms | Source / market | Need / intent | Search-result evidence | Optional estimates / tool / date | Existing URL | Target page / action | Reason / metric |
 |---|---|---|---|---|---|---|---|
 
-## 关键词页面表 M2
-| K-ID | 原始词/来源 | 需求/主次意图 | SERP证据 | 量/工具/日期 | 现有URL | 目标页/行动 | 理由/指标 |
-|---|---|---|---|---|---|---|---|
+## Build a Content Brief
+Use the Content Brief or Campaign Brief fields in references/briefs.md. Connect each brief to its opportunity, keyword group and evidence.
 
-## 简报 M3
-使用 references/briefs.md 中对应层级的完整字段。为每篇分配 P-ID，关联 O/K/E-ID。
-
-## 内容与 QA M4
-正文：
-标题 / Meta description：
-内部链接 / 图片建议：
-| 声明 | E-ID | 核查结果 | 修订/资料需求 |
+## Write & Review Content
+Draft:
+Title / description:
+Link / image suggestions:
+| Claim | Source | Check result | Revision / material needed |
 |---|---|---|---|
 
-## 诊断 M5
-| 指标/分组 | 前期 | 本期 | 绝对变化 | 相对变化或百分点 | 分母/口径 |
+## Diagnose Search Performance
+| Metric / group | Previous | Current | Absolute change | Relative change or percentage points | Definition / denominator |
 |---|---|---|---|---|---|
-| 现象 | 已确认事实/E-ID | 原因假设 | 反证/补查 | 行动 | 验证指标/窗口 |
+| Symptom | Verified evidence | Possible cause | Counterevidence / next check | Action | Metric / review window |
 |---|---|---|---|---|---|
 
-## 优先级 M6
-| Task-ID | O/K/P-ID | 行动 | 价值/证据 | 成本/依赖 | 优先级/理由 | 负责人建议 | 最小交付 | 指标/复查条件 |
-|---|---|---|---|---|---|---|---|---|
+## Prioritise Content Work
+| Named task | Intended effect / evidence | Effort / dependencies | Priority / reason | Suggested owner | Minimum deliverable | Metric / review condition |
+|---|---|---|---|---|---|---|
 
-## 来源与下一步
-| E-ID | 来源/位置 | 支持判断 | 日期/市场 | 证据类型/限制 |
+## Sources & Next Steps
+| Source | URL / file location | Supported judgement | Date / market | Evidence type / limitation |
 |---|---|---|---|---|
-最后列需要用户提供或确认的具体材料，以及下一项能立即执行的任务。
+Finish with specific missing materials and the next executable action.
